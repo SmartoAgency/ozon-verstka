@@ -166,3 +166,57 @@ window.addEventListener('load', () => {
   window.locoScroll.update();
 });
 /** ******************************* */
+
+window.addEventListener('DOMContentReloaded', () => {
+  const contactForms = ['[data-communication-contact]', '[data-home-contact]'];
+  console.log('reinit contact form');
+  contactForms.forEach((form) => {
+    const $form = document.querySelector(form);
+    if ($form) {
+      /* eslint-disable */
+      new FormMonster({
+        /* eslint-enable */
+        elements: {
+          $form,
+          showSuccessMessage: false,
+          successAction: () => {
+            window.location.href = 'message';
+            },
+          $btnSubmit: $form.querySelector('[data-btn-submit]'),
+          fields: {
+            name: {
+              inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-name]') }),
+              rule: yup.string().required(i18next.t('required')).matches(/^[aA-zZ\s]+$/, i18next.t('onlyletters')).trim(),
+              defaultMessage: i18next.t('name'),
+              valid: false,
+              error: [],
+            },
+  
+            phone: {
+              inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-phone]'), typeInput: 'phone' }),
+              rule: yup
+                .string()
+                .required(i18next.t('required'))
+                .min(16, i18next.t('field_too_short', { cnt: 19 - 7 })),
+  
+              defaultMessage: i18next.t('phone'),
+              valid: false,
+              error: [],
+            },
+          },
+        },
+      });
+      // $form.querySelector('.js-mask-absolute').addEventListener('click', () => {
+      //   $form.querySelector('[name="phone"]').focus();
+      //   $form.querySelector('.js-mask-absolute').style.display = 'none';
+      // }, false);
+  
+      $form.querySelectorAll('.js-mask-absolute').forEach(elem => {
+        elem.addEventListener('click', () => {
+          $form.querySelector('[name="phone"]').focus();
+          $form.querySelector('.js-mask-absolute').style.display = 'none';
+        }, false);
+      })
+    }
+  });
+})

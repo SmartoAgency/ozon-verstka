@@ -29,7 +29,7 @@ const uglify = require('gulp-uglify-es').default;
 const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
-const imageminPngquant = require('imagemin-pngquant');
+// const imageminPngquant = require('imagemin-pngquant');
 //svg
 const svgSprites = require("gulp-svg-sprites");
 const cheerio = require('gulp-cheerio');
@@ -417,10 +417,10 @@ function _images() {
 						}),
 						imagemin.svgo(),
 						imagemin.optipng(),
-						imageminPngquant({
-							quality: [0.85, 0.90],
-							speed: 5
-						})
+						// imageminPngquant({
+						// 	quality: [0.85, 0.90],
+						// 	speed: 5
+						// })
 					], {
 						verbose: true
 					})))
