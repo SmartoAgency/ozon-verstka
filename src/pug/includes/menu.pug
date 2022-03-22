@@ -1,0 +1,59 @@
+-
+  var menu1 = [
+    ['Цінності', 'values.html'],
+    ['Інфраструктура', 'infrastructures.html'],
+    ['Переваги', 'advantages.html'],
+    ['День в OZON', 'day.html'],
+    ['SFERA LIVING SYSTEM', 'sfera.html'],
+    ['Галерея', 'gallery.html'],
+    ['Відео', 'video.html'],
+    ['Новини', 'news.html']
+  ];
+  var menu2 = [
+    ['Обрати квартиру', ''],
+    ['Підбір за параметрами', ''],
+    ['Умови придбання', 'terms-purchase.html'],
+    ['Технічні характеристики', 'specifications.html']
+  ];
+  var menu3 = [
+    ['Девелопер', 'developer.html'],
+    ['Документація', 'documents.html'],
+    ['Хід будівництва', 'build-progress.html'],
+    ['Вебкамери', 'webcam.html'],
+    ['CLIENT TECHNICAL CONTROL', 'technical_control.html']
+  ];
+  var menu4 = [
+    ['Розташування', 'location.html'],
+    ['Зв’язок', 'communication.html']
+  ];
+.menu-wrap(data-menu data-disable-page-scroll)
+  .menu
+    .menu__section-wrapper
+      .menu__section
+        .menu__title(data-animation) Будинок
+        ul(data-animation2)
+          each el in menu1
+            li
+              a(href=el[1])= el[0]
+      .menu__section
+        .menu__title(data-animation) Квартири
+        ul(data-animation2)
+          each el in menu2
+            li
+              a(href=el[1])= el[0]
+
+      .menu__section
+        .menu__title(data-animation) Будівництво
+        ul(data-animation2)
+          each el in menu3
+            li
+              a(href=el[1])= el[0]
+
+      .menu__section
+        .menu__title(data-animation) Контакти
+        ul(data-animation2)
+          each el in menu4
+            li
+              a(href=el[1])= el[0]
+      .menu__block-pattern
+        img(src='./assets/images/icons/Pattern-10.svg' alt='Pattern-10')

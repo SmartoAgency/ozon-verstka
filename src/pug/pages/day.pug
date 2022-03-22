@@ -1,0 +1,107 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'День в OZON'
+    var id_page = 'id-page-day'
+    var class_page = 'class-page-day'
+    var breadcrumbsSubitem = [
+      {
+        label: 'День в OZON',
+        link: pagesLink[0].day
+      }
+    ]
+    var blocks = [{
+      img: 'day/1.png',
+      text: 'Прокинутись під спів птахів',
+      time: '08:00'
+    }, {
+      img: 'day/2.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '08:30'
+    }, {
+      img: 'day/3.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '09:00'
+    }, {
+      img: 'day/4.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '09:30',
+    }, {
+      img: 'day/5.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '10:00'
+    }, {
+      img: 'day/6.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '11:00',
+    }, {
+      img: 'day/7.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '13:00',
+    },{
+      img: 'day/8.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '15:00',
+    }, {
+      img: 'day/9.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '18:00',
+    }, {
+      img: 'day/10.png',
+      text: 'Поснідати з видом на ботанічний сад',
+      time: '20:00',
+    }]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/animation.js')
+
+block content
+  include ../includes/breadcrumbs.pug
+
+  #day
+    .page-inner-offset
+      h1(data-span-entry1)#up.page-title= title_page
+      .day-blocks-wrapper
+        each bl in blocks
+          .block
+            .block__img-wrapper
+              +img(bl.img)
+              .block__gradient
+              .block__time(data-span-entry2)= bl.time
+            .block__text.helvetica-title(data-span-entry1)= bl.text
+    .first__pattern
+      img(src='./assets/images/icons/Pattern-11.svg' alt='Pattern')
+    .second__pattern
+      img(src='./assets/images/icons/Pattern-9.svg' alt='Pattern')
+    .third__pattern
+      img(src='./assets/images/icons/Pattern-5.svg' alt='Pattern')
+    .fourth__pattern
+      img(src='./assets/images/icons/Pattern-8.svg' alt='Pattern')
+    .fifth__pattern
+      img(src='./assets/images/icons/Pattern-2.svg' alt='Pattern')
+    .sixth__pattern
+      img(src='./assets/images/icons/Pattern-1.svg' alt='Pattern')
+    .seventh__pattern
+      img(src='./assets/images/icons/Pattern-4.svg' alt='Pattern')
+    .eighth__pattern
+      img(src='./assets/images/icons/Pattern-5.svg' alt='Pattern')
+    .ninth__pattern
+      img(src='./assets/images/icons/Pattern-3.svg' alt='Pattern')
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

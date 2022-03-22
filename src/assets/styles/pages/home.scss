@@ -1,0 +1,1044 @@
+#home-page .text {
+  font-size: 16px;
+}
+
+.promo, .video, .garden, .aesthetics, .infrastructure, .location, .apartments, .card, .info, .connection{
+  position: relative;
+}
+
+.ecological__content {
+  @include to(820px) {
+    margin-bottom: 200px;
+    margin-top: 100px;
+  }
+
+  @include to(575px) {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+}
+
+.garden__content {
+  @include to(820px) {
+    margin-top: 0;
+    margin-bottom: 200px;
+  }
+
+  @include to(575px) {
+    margin-bottom: 50px;
+  }
+}
+
+.aesthetics__content, .location__content, .apartments__content {
+  @include to(820px) {
+    margin-top: 0;
+    margin-bottom: 100px;
+  }
+  @include to(575px) {
+    margin-bottom: 50px;
+  }
+}
+
+.infrastructure__content {
+  @include to(820px) {
+    margin-bottom: 250px;
+  }
+  @include to(575px) {
+    margin-bottom: 150px;
+  }
+}
+
+.garden__image img {
+  @include to(820px) {
+    height: 600px;
+    object-fit: cover;
+  }
+
+  @include to(575px) {
+    height: 450px;
+  }
+}
+
+.ecological__image img, .aesthetics__image img, .infrastructure__image img {
+  @include to(820px) {
+    height: 477px;
+    object-fit: cover;
+  }
+
+  @include to(575px) {
+    height: 280px;
+  }
+}
+
+.ecological__image img {
+  @include to(575px) {
+    object-position: top;
+  }
+}
+
+.infrastructure__image img {
+  @include to(575px) {
+    object-position: bottom;
+  }
+}
+
+
+.garden, .aesthetics, .location, .apartments, .happiness {
+  @include to(820px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.promo {
+  height: 95vh;
+  width: 100%;
+  background-color: $w;
+
+  @media screen and (max-width: 992px) and(min-width: 640px){
+    height: 100%;
+    padding: 200px 0;
+  }
+
+  .button-bottom {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    @include HelveticaNeueCyr(10px, 140%, center, uppercase, $main-brown, 400);
+
+    @include to(820px) {
+      display: none;
+    }
+
+    svg {
+      vertical-align: middle;
+      margin-left: 0;
+      margin-right: 15px;
+      border-radius: 50%;
+    }
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: var(--header-padding);
+    padding-right: var(--header-padding);
+  }
+
+  &__group {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    //background: url("../images/icons/Group.svg") center center / contain no-repeat;
+    width: 272px;
+    height: 264px;
+
+    @include from(1600px) {
+      width: 334px;
+      height: 344px;
+    }
+
+    @include to(575px) {
+      width: 112px;
+      height: 115px;
+    }
+  }
+}
+
+.promo__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 50px;
+    @include HelveticaNeueCyr(14px, 170%, center, uppercase, $main-brown, 300);
+
+    @include from(1600px) {
+      font-size: 14px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include to(820px){
+    max-width: 60%;
+
+    li {
+      margin-right: 0;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @include to(585px) {
+    max-width: 70%;
+    flex-direction: column;
+
+    li {
+      font-size: 12px;
+      margin-top: 10px;
+
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.video {
+  width: 100%;
+  height: 600px;
+
+  @include from(1600px) {
+    height: 800px;
+  }
+
+  @include to(575px) {
+    height: 450px;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  //&__button {
+  //  position: absolute;
+  //  left: 50%;
+  //  bottom: 50px;
+  //  transform: translateX(-50%);
+  //
+  //  svg {
+  //    height: 50px;
+  //    width: 50px;
+  //    margin-left: 20px;
+  //  }
+  //}
+
+  &__pattern {
+    position: absolute;
+    z-index: -1;
+    bottom: -17%;
+    left: 17%;
+    transform: translateX(17%);
+    //background: url("../images/icons/Pattern-1.svg") center center / contain no-repeat;
+    width: 200px;
+    height: 197px;
+
+    @include from(1600px) {
+      width: 313px;
+      height: 306px;
+    }
+
+    @include to(820px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include to(575px) {
+      bottom: -10%;
+      height: 142px;
+      width: 142px;
+    }
+  }
+}
+
+.garden__pattern {
+  position: absolute;
+  bottom: -5%;
+  left: calc(-1*(266px/2));
+  //background: url("../images/icons/Pattern-2.svg") center center / contain no-repeat;
+  width: 266px;
+  height: 232px;
+
+  @include from(1600px) {
+    left: calc(-1*(355px/2));
+    height: 293px;
+    width: 335px;
+
+  }
+
+  @include to(820px) {
+    bottom: 72%;
+  }
+
+  @include to(575px) {
+    height: 99px;
+    width: 112px;
+    left: calc(-1*(112px/2));;
+    bottom: 80%;
+  }
+}
+
+.infrastructure__pattern {
+  position: absolute;
+  top: -150px;
+  left: 75%;
+  z-index: -1;
+  //background: url("../images/icons/Pattern-3.svg") center center / contain no-repeat;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 192px;
+
+  @include from(1600px) {
+    height: 301px;
+    width: 313px;
+    top: -240px;
+  }
+
+  @include to(820px) {
+    top: 37%;
+    left: 50%;
+  }
+
+  @include to(575px) {
+    height: 136px;
+    width: 142px;
+    top: 35%;
+  }
+}
+
+.concept {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  background: url("../images/img/concept.jpg") center center / cover no-repeat;
+
+  @include to(820px){
+    grid-template-columns: repeat(1, 100%);
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+
+  @include to(575px) {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    @include cormorant (96px, 100%, left, 0.05em, uppercase, $w);
+
+    display: flex;
+    align-self: flex-start;
+    margin-left: var(--left-right-margin);
+    margin-top: 15%;
+
+    @include from(1600px) {
+      font-size: 120px;
+    }
+
+    @include to(992px) {
+      font-size: 82px;
+    }
+
+
+    @include to(820px) {
+      font-size: 96px;
+      margin: 0 80px 0 80px;
+    }
+
+    @include to(575px) {
+      font-size: 42px;
+      margin: 0 var(--left-right-margin);
+      max-width: 70%;
+    }
+  }
+
+  &__items {
+    margin: 15% 2% 15% 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 90px;
+
+    @include to(820px) {
+      margin: 100px 0 0 80px;;
+      grid-row-gap: 40px;
+    }
+
+    @include to(575px) {
+      margin: 20px 0 0 var(--left-right-margin);
+      grid-row-gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-numbers {
+      @include tenor (48px, 120%, left, normal, none, $w);
+      display: flex;
+      align-items: flex-end;
+
+      @include from(1600px) {
+        font-size: 64px;
+      }
+
+      span {
+        @include tenor (48px, 120%, left, normal, none, $w);
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+      @include to(575px) {
+        font-size: 24px;
+
+        span {
+          font-size: 24px;
+          margin-right: 5px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    &-numbers-2 {
+      @include tenor (48px, 120%, left, normal, none, $w);
+      display: flex;
+      align-items: flex-start;
+
+      sup {
+        @include tenor (18px, 120%, left, normal, none, $w);
+      }
+
+      @include to(575px) {
+        font-size: 24px;
+
+        sup {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-text {
+      @include HelveticaNeueCyr (18px, 170%, left, lowercase, $w, 300);
+
+      @include to(575px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.location {
+
+  &__map {
+    width: 50%;
+    height: 80vh;
+
+    @include to(820px) {
+      width: 100%;
+      height: 477px;
+    }
+
+    @include to(575px) {
+      height: 280px;
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.apartments__video {
+  width: 100%;
+  height: 600px;
+  position: relative;
+
+  @include from(1600px) {
+    height: 800px;
+  }
+
+  @include to(575px) {
+    height: 450px;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.apartments__pattern {
+  position: absolute;
+  top: 83%;
+  transform: translateY(-50%);
+  left: calc(-1*(264px/2));
+  //background: url("../images/icons/Pattern-4.svg") center center / contain no-repeat;
+  width: 264px;
+  height: 261px;
+
+  @include from(1600px) {
+    left: calc(-1*(334px/2));
+    height: 331px;
+    width: 334px;
+  }
+
+  @include to(820px) {
+    top: 20%;
+  }
+
+  @include to(575px) {
+    left: calc(-1*(112px/2));
+    height: 111px;
+    width: 112px;
+  }
+}
+
+.card {
+  .title {
+    text-align: left;
+
+    @include to(1199px) {
+      font-size: 36px;
+    }
+
+    @include to(820px) {
+      font-size: 30px;
+    }
+  }
+
+  @include to(575px) {
+    .blocks-margin {
+      margin-top: 120px;
+    }
+  }
+}
+
+.card-top {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+
+  .card-button.button {
+    margin-top: 20px;
+
+    a {
+      justify-content: flex-start;
+    }
+  }
+
+  @include to(575px) {
+    grid-template-columns: repeat(1, 100%);
+    grid-column-gap: 0;
+  }
+
+  .card__item-image img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+
+    @include from(1600px) {
+      height: 660px;
+    }
+
+    @include to(820px) {
+      height: 477px;
+    }
+
+    @include to(575px) {
+      height: 360px;
+    }
+  }
+}
+
+.card__item-image img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+
+  @include from(1600px) {
+    height: 800px;
+  }
+
+  @include to(820px) {
+    height: 477px;
+  }
+
+  @include to(575px) {
+    height: 360px;
+  }
+}
+
+.card__item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  .card-button.button {
+    margin-top: 0;
+  }
+
+  @include to(575px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .card-button.button {
+      margin-top: 20px;
+    }
+  }
+}
+
+.card__item-left {
+  margin-right: 50px;
+
+  @include to(820px) {
+    margin-right: 10px;
+  }
+}
+
+.card__item-right {
+  position: relative;
+  margin-left: 50px;
+
+  .pattern {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 261px;
+    height: 263px;
+
+    @include from(1600px) {
+      height: 313px;
+      width: 315px;
+    }
+
+    @include to(820px) {
+      top: 14%;
+      right: 50%;
+      width: 197px;
+      height: 199px;
+    }
+
+    @include to(575px) {
+      width: 142px;
+      height: 143px;
+      top: 0;
+    }
+  }
+
+  @include to(820px) {
+    margin-left: 10px;
+    padding-top: 100px;
+  }
+
+  @include to(575px) {
+    margin-top: 120px;
+    padding-top: 0;
+    margin-left: 0;
+  }
+}
+
+.info {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: var(--left-right-margin);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-evenly;
+  align-items: start;
+  justify-items: start;
+  row-gap: 90px;
+  background: url("../images/img/info.jpg") center center / cover no-repeat;
+
+  @include to(820px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 0;
+    grid-template-columns: repeat(1, 100%);
+    justify-content: center;
+    align-items: center;
+    row-gap: 60px;
+    width: 100%;
+  }
+
+  @include to(575px) {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    row-gap: 30px;
+  }
+
+  &__first,
+  &__third {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include from(1600px) {
+      grid-template-columns: 200px auto;
+    }
+
+    @include to(820px) {
+      grid-template-columns: 120px auto;
+      column-gap: 30px;
+    }
+
+    @include to(575px) {
+      grid-template-columns: 90px auto;
+    }
+
+    &-svg {
+      grid-row: 1 / 3;
+
+      @include to(820px) {
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+
+      img {
+        width: 120px;
+
+        @include to(575px) {
+          width: 90px;
+        }
+      }
+    }
+
+    @include to(820px) {
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+
+  &__first,
+  &__second,
+  &__third,
+  &__fourth {
+    @include to(820px) {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title-2 {
+      text-align: left;
+
+      @include to(820px) {
+        text-align: center;
+      }
+    }
+
+    .button {
+      margin-top: 0;
+
+      @include to(820px) {
+        margin: 0 auto;
+      }
+
+       a {
+         justify-content: flex-start;
+         color: $w;
+       }
+
+      &:hover a{
+        color: $main-green;
+      }
+    }
+  }
+
+  &__pattern {
+    position: absolute;
+    z-index: -1;
+    top: 100%;
+    left: 75%;
+    width: 264px;
+    height: auto;
+    transform: translate(-50%, -50%);
+
+    @include from(1600px) {
+      width: 299px;
+      height: 301px;
+    }
+
+    @include to(920px) {
+      top: 120%;
+      left: 0;
+    }
+
+    @include to(575px) {
+      width: 112px;
+    }
+  }
+}
+
+.connection {
+  background: $dark-grey;
+  padding: 100px var(--left-right-margin);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include from(1600px) {
+    padding: 160px 250px 160px 340px;
+  }
+
+  @include to(992px) {
+    padding: 100px 0 0;
+    margin: 100px 0 0 0;
+  }
+
+  @include to(575px) {
+    padding: 50px 0 0;
+  }
+
+  .half-block {
+    @include to(992px) {
+      width: 100%;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    @include to(992px) {
+      flex-direction: column;
+    }
+  }
+
+  &__contacts-item {
+    margin-bottom: 70px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    @include to(575px) {
+      .helvet__title {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__pattern {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 80px;
+    width: 264px;
+    height: auto;
+  }
+
+  &__contacts-left, &__contacts-right{
+    z-index: 1;
+  }
+
+  &__contacts-left, &__contacts-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__contacts-right {
+    @include to(992px) {
+      align-items: center;
+    }
+  }
+
+  &__contacts-left{
+    @include to(992px) {
+      padding: 0 var(--left-right-margin) 100px var(--left-right-margin);
+      flex-direction: row;
+
+      .connection__contacts-item{
+        margin-bottom: 0;
+
+        &:last-child {
+          padding-left: 50px;
+        }
+      }
+    }
+
+
+    @include to(650px) {
+      padding: 0 var(--left-right-margin) 50px var(--left-right-margin);
+      flex-direction: column;
+
+      .connection__contacts-item{
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .title {
+    margin-bottom: 100px;
+
+    @include to(992px) {
+      margin-bottom: 50px;
+      padding-left: var(--left-right-margin);
+    }
+
+    @include to(575px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .connection__text {
+    @include HelveticaNeueCyr(18px, 170%, left, none, $main-brown, 300);
+    max-width: 60%;
+
+    @include to(992px) {
+      max-width: 80%;
+    }
+
+    @include to(575px) {
+      max-width: 100%;
+      font-size: 12px;
+    }
+  }
+
+  a.connection__text{
+    @include hover-color;
+  }
+
+  .connection__text-upper {
+    @include HelveticaNeueCyr(18px, 170%, left, uppercase, $main-brown, 300);
+    margin-top: 20px;
+
+    @include to(575px) {
+      font-size: 12px;
+    }
+  }
+
+  .button {
+    margin-top: 30px;
+  }
+
+  form.home-form {
+    --input-padding: 23px;
+    width: 100%;
+    background: $w;
+    padding: 70px;
+    position: relative;
+
+    @include to(992px) {
+      padding: 100px 150px;
+    }
+
+    @include to(575px) {
+      padding: 50px var(--left-right-margin);
+    }
+
+    .helvet__title {
+      margin-bottom: 0;
+    }
+
+    .form-field__wrapper {
+      margin-top: 30px;
+    }
+
+    .form-info-block {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .form-checkbox {
+        padding-left: 20px;
+      }
+
+      img {
+        height: 20px;
+        width: 20px;
+      }
+    }
+
+    .form-field:not(#t) {
+      background: $light-grey;
+      border: 1px solid #D9DBDF;
+    }
+
+    .form-field-input {
+      height: 50px;
+      margin-top: 10px;
+    }
+
+    .mask-absolute {
+      background-color: $light-grey;
+    }
+  }
+}
+
+.helvet__title {
+  @include HelveticaNeueCyr(18px, 100%, left, uppercase, $main-brown, 400);
+  margin-bottom: 20px;
+}
+
+
+.pageup {
+  display: block;
+  position: fixed;
+  z-index: 6;
+  bottom: 80px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+
+  svg {
+    mix-blend-mode: difference;
+
+    path {
+      stroke: $main-brown;
+    }
+
+    circle {
+      stroke: #ECEDEF;
+      stroke-width: 1px;
+    }
+  }
+
+  @include to(575px) {
+    right: var(--header-padding);
+  }
+}
+

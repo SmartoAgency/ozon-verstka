@@ -1,0 +1,52 @@
+#location {
+  .info-top__text {
+    width: 60%;
+
+    @include to(425px) {
+      width: 100%;
+    }
+
+    .tenor-title {
+      margin-bottom: 0;
+    }
+  }
+
+  .map {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .location-blocks__wrapper {
+    margin-top: 80px;
+
+    .block-info-text{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: $w;
+      width: 150px;
+      height: 50px;
+
+      @include HelveticaNeueCyr(14px, 100%, center, none, $main-brown, 400);
+    }
+  }
+
+  .block-img__wrapper {
+    overflow: hidden;
+  }
+
+  @include to(425px) {
+    .location-blocks__wrapper .block__row .col .block {
+      margin-bottom: 40px;
+    }
+
+    .location-blocks__wrapper .block__row .col:last-child .block:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

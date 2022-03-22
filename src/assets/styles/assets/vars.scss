@@ -1,0 +1,135 @@
+$default-font: "Tenor Sans Regular",
+sans-serif;
+$default-font2: "Cormorant Garamond",
+sans-serif;
+$default-font3: "Helvetica Neue",
+sans-serif;
+
+$main-brown: #4D4D4C;
+$main-green: #A6B720;
+$light-grey: #F9F9F9;
+$grey: #D9DBDF;
+$footer-c: #BBBEC2;
+$dark-grey: linear-gradient(270deg, #F9F9F9 0%, #F2F2F2 100%);
+$w: #FFFFFF;
+
+
+$mc: #1A2941;
+
+:root {
+  --in: cubic-bezier(0.13, 0.81, 0.23, 0.96);
+  --header-h: 110px;
+  --header-h-2: 80px;
+  --header-padding: 50px;
+
+  --logo-h: 40px;
+  --logo-w: 290px;
+
+  --home-title--margin: 30px;
+
+  --blocks-margin: 100px;
+  --blocks-offset: 20px;
+
+  --left-right-margin: 80px;
+  --inner-margin: 40px;
+
+  --offset: 100px;
+
+  --page-inner-offset: 250px;
+  --page-inner-offset2: 100px;
+  --h1-page: 50px;
+}
+
+@media screen and (min-width: 1600px){
+  :root {
+    --in: cubic-bezier(0.13, 0.81, 0.23, 0.96);
+    --header-h: 110px;
+    --header-h-2: 80px;
+    --header-padding: 50px;
+
+    --logo-h: 40px;
+    --logo-w: 290px;
+
+    --home-title--margin: 30px;
+
+    --blocks-margin: 160px;
+    --blocks-offset: 50px;
+
+    --left-right-margin: 115px;
+    --inner-margin: 60px;
+
+    --offset: 200px;
+
+    --page-inner-offset: 250px;
+    --page-inner-offset2: 150px;
+    --h1-page: 50px;
+  }
+}
+
+@media screen and (max-width: 1199px){
+  :root {
+    --inner-margin: 20px;
+    --left-right-margin: 50px;
+    --page-inner-offset: 150px;
+  }
+}
+
+
+@media screen and (max-width: 992px){
+  :root {
+    --left-right-margin: 40px;
+    --page-inner-offset: 100px;
+  }
+}
+
+@media screen and (max-width: 820px){
+  :root {
+    --in: cubic-bezier(0.13, 0.81, 0.23, 0.96);
+    --header-h: 90px;
+    --header-h-2: 80px;
+    --header-padding: 20px;
+
+    --logo-h: 40px;
+    --logo-w: 250px;
+
+    --home-title--margin: 30px;
+
+    --blocks-margin: 100px;
+    --blocks-offset: 20px;
+
+    --left-right-margin: 20px;
+    --inner-margin: 10px;
+
+    --offset: 20px;
+
+    --page-inner-offset: 20px;
+    --page-inner-offset2: 80px;
+    --h1-page: 30px;
+  }
+}
+
+@media screen and (max-width: 575px){
+  :root {
+    --in: cubic-bezier(0.13, 0.81, 0.23, 0.96);
+    --header-h: 70px;
+    --header-h-2: 50px;
+    --header-padding: 15px;
+
+    --logo-h: 15px;
+    --logo-w: 110px;
+
+    --home-title--margin: 20px;
+
+    --blocks-margin: 50px;
+    --blocks-offset: 15px;
+
+    --left-right-margin: 15px;
+    --inner-margin: 10px;
+
+    --offset: 20px;
+
+    --page-inner-offset: 20px;
+    --page-inner-offset2: 50px;
+    --h1-page: 20px;
+  }
+}

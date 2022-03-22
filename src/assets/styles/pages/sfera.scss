@@ -1,0 +1,42 @@
+#sfera{
+  position: relative;
+
+  @include to(820px) {
+    .first__pattern, .second__pattern, .third__pattern, .fourth__pattern, .fifth__pattern {
+      display: none;
+    }
+  }
+
+  .info-top__text .text{
+    margin-left: 30%;
+
+    @include to(820px) {
+      margin-left: 20%;
+    }
+
+    @include to(575px) {
+      margin-left: 0;
+    }
+  }
+}
+
+.sfera-half-block {
+  @include HelveticaNeueCyr(18px, 160%, left, uppercase, $main-brown, 400);
+  margin-left: 45%;
+
+  @include from(1600px) {
+    font-size: 22px;
+  }
+
+  @include to(820px) {
+    margin-left: 30%;
+  }
+
+  @include to(575px) {
+    font-size: 16px;
+  }
+
+  @include to(425px) {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,145 @@
+#news {
+  position: relative;
+
+  .news-block__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.news-wrapper {
+  width: 50%;
+  margin-top: 50px;
+
+  &:nth-child(even) {
+    padding-left: var(--inner-margin);
+
+    @include to(425px) {
+      padding-left: 0;
+    }
+  }
+
+  &:nth-child(odd) {
+    padding-right: var(--inner-margin);
+
+    @include to(425px) {
+      padding-right: 0;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:nth-child(2) {
+    margin-top: 0;
+
+    @include to(425px) {
+      margin-top: 50px;
+    }
+  }
+
+  @include to(425px) {
+    width: 100%;
+  }
+
+  .news {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    cursor: pointer;
+
+    img {
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.02);
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    .tenor-date {
+      @include tenor(12px, 100%, left, normal, uppercase, $main-brown);
+      margin-top: 20px;
+      margin-bottom: 10px;
+
+      @include from(1600px) {
+        font-size: 14px;
+      }
+    }
+
+    .tenor-title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.pagination__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 100px;
+
+  @include from(1600px) {
+    margin-top: 150px;
+  }
+
+  @include to(820px) {
+    margin-top: 30px;
+  }
+
+  @include to(425px) {
+    margin-top: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      fill: $main-brown;
+      height: 7px;
+      width: 10px;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+    span {
+      @include HelveticaNeueCyr(10px, inherit, center, uppercase, $main-brown, 400);
+    }
+  }
+
+  .pagination__numbers {
+    margin-left: 40px;
+    margin-right: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      span {
+        @include tenor(18px, 100%, center, normal, uppercase, $main-brown);
+      }
+    }
+  }
+}

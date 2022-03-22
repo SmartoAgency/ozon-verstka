@@ -1,0 +1,41 @@
+.class-page-communication {
+  background: $dark-grey;
+}
+
+#communication {
+  position: relative;
+
+
+  .twentythird__pattern {
+    bottom: -10%;
+    z-index: -1;
+  }
+
+  .connection {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+
+    .connection__contacts-left {
+      padding: 0;
+
+      @include to(992px){
+        margin-bottom: 80px;
+      }
+
+      @include to(575px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .connection__contacts-right {
+      form.home-form {
+        max-width: 700px;
+
+        @include to(820px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

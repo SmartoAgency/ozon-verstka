@@ -1,0 +1,84 @@
+#day {
+  position: relative;
+
+  @include to(820px) {
+    .first__pattern, .second__pattern, .third__pattern, .fourth__pattern, .fifth__pattern, .sixth__pattern, .seventh__pattern, .eighth__pattern, .ninth__pattern {
+      display: none;
+    }
+  }
+}
+
+.day-blocks-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+    margin-bottom: 70px;
+
+    @include to(575px) {
+      margin-bottom: 50px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__img-wrapper{
+      position: relative;
+      height: max-content;
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 500px;
+
+        @include to(1024px) {
+          height: 450px;
+        }
+
+        @include to(575px) {
+          height: 300px;
+        }
+      }
+    }
+
+    &__time {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      @include  tenor(64px, 100%, left, 0.05em, uppercase, $w);
+      margin: 0 0 30px 30px;
+
+      @include to(575px) {
+        margin: 0 0 20px 20px;
+        font-size: 46px;
+      }
+
+      @include to(425px) {
+        margin: 0 0 10px 10px;
+        font-size: 32px;
+      }
+    }
+
+    &__text {
+      margin-top: 20px;
+
+      @include to(575px) {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
